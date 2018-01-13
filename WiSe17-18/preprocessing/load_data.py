@@ -22,4 +22,4 @@ with tf.Session() as sess:
                 token = str(token)
                 pos_tag = str(pos_tag)
                 # Run the Print ob
-                print(token, total)
+                print(token, pos_tag)
