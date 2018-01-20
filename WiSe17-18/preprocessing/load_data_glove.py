@@ -8,7 +8,7 @@ class Preprocessing:
     def __init__(self):
         filename = '../glove.6B.50d.txt'
         # Load Glove pretrained vocabulary
-        embedding_vocabulary = self.loadGloVe(filename)
+        embedding_vocabulary = self.load_glove(filename)
         vocab_size = len(embedding_vocabulary)
         embedding_dim = len(list((embedding_vocabulary.values()))[0])
         embedding = np.asarray(embedding_vocabulary.values())
