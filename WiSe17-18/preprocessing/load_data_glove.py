@@ -25,15 +25,13 @@ class Preprocessing:
             sess.run(init_op)
             print(sess.run(W))
         
-    def loadGloVe(self, filename):
+    def load_glove(self, filename):
         embedding_dict = dict()
-        file = open(filename,'r')
-        for line in file.readlines():
-            row = line.split(" ")
-            embedding_dict[row[0]] = [float(i) for i in row[1:]]
-        
+        with open(filename) as f:
+            for line in f:
+                row = line.split()
+                embedding_dict[row[0]] = [float(i) for i in row[1:]]
         print('Loaded GloVe!')
-        file.close()
         return embedding_dict
 
 if __name__ == "__main__":
